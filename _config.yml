@@ -78,6 +78,6 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/MadShawn/madshawn.github.io.git
+  repo: https://github.com/MadShawn/blog.git
   branch: master
-  message: hexo pages
+  message: hexo automatic git deploy
