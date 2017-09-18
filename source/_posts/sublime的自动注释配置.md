@@ -53,6 +53,10 @@ sumlime安装插件的方式：
     }
 > 配置的详细说明可参考README文件：prefences > package settings > DocBlockr > README
 
+### 插件的使用
+在需要增加注释的函数/变量定义的上一行，输入 `/**` ，然后按 `Enter` 键，即可添加默认的注释信息。  
+需要手工补充*函数*、*参数*和*返回值*的数**据类型**和**描述**。
+
 ## 批量增加函数注释
 smartcomments是一个nodejs写的给文件的所有函数增加注释的工具，详细的说明可参考 [smartcomment主页](http://smartcomments.github.io/) 和 [github地址](https://github.com/smartcomments/smartcomments)
 
