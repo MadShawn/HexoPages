@@ -278,14 +278,20 @@ smartcomments是一个nodejs写的给文件的所有函数增加注释的工具�
                 matchValRe = /^[\w:-]+/;
             srcValue = srcValue.replace(stripTypeRe, '');
             genValue = genValue.replace(stripTypeRe, '');
-            srcValue = matchValRe.exec(srcValue)[0];
-            genValue = matchValRe.exec(genValue)[0];
+            srcValue = matchValRe.exec(srcValue);
+            genValue = matchValRe.exec(genValue);
+            if (srcValue && genValue) {
+                srcValue = srcValue[0];
+                genValue = genValue[0];
 
-            if (srcValue) {
-                return (genValue && srcValue === genValue);
-            } else {
-                return !genValue;
+                if (srcValue) {
+                    return (genValue && srcValue === genValue);
+                } else {
+                    return !genValue;
+                }
             }
+
+            return false;
         },
 
 4. mergeOtherSrcTags
