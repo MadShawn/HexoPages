@@ -12,17 +12,15 @@ tags: 编码规范
 
 # 文件注释 （必须有）
 文件注释主要用于对无明确的类结构的文件的注释，比如只有一个大对象定义的文件（如Application.js）、多个全局函数定义的文件（util.js）、Angular的各种对象文件（route、controller、directive、service等）。注释规范如下：
-> 文件头注释中，要用 @file
 
 + 常规文件
 
         /**
          * 定义web app全局命名空间，并在此空间下定义属性和函数，以便全局使用
-         * @file      Application.js
-         * @author    ChenXiao
-         * @date      2017-09-11
+         * -author    ChenXiao
+         * -date      2017-09-11
          *
-         * @copyright @Navinfo, all rights reserved.
+         * -copyright @Navinfo, all rights reserved.
          */
 
         var App = {};
@@ -34,11 +32,10 @@ tags: 编码规范
 
         /**
          * 编辑页面的主controller
-         * @file editorCtrl.js
-         * @author ChenXiao
-         * @date   2017-09-11
+         * -author ChenXiao
+         * -date   2017-09-11
          *
-         * @copyright @Navinfo, all rights reserved.
+         * -copyright @Navinfo, all rights reserved.
          */
 
         angular.module('app').controller('editorCtrl', ['$scope', '$rootScope', '$cookies', '$timeout', '$q',
@@ -56,22 +53,19 @@ tags: 编码规范
 
 # 类注释 （必须有，可以替代文件注释）
 类注释主要用于符合类结构的文件的注释，比如通过L.Class创建的模拟类的文件（mapRender、dataApi、uikit下的文件）。由于代码中基本上达到了一个类一个文件的结构，因此可以用类注释替代文件注释。注释的规范如下：
-> 类注释中，要用 @class
 
     /**
      * 交限的前端数据模型
-     * @class FM.dataApi.RdRestrictionDetail
-     * @author ChenXiao
-     * @date   2017-09-11
+     * -author ChenXiao
+     * -date   2017-09-11
      *
-     * @copyright @Navinfo, all rights reserved.
+     * -copyright @Navinfo, all rights reserved.
      */
     FM.dataApi.RdRestrictionDetail = FM.dataApi.Feature.extend({
         /**
          * 模型转换主函数，将接口返回的数据转换为前端数据模型
-         * @method setAttributes
-         * @author ChenXiao
-         * @date   2017-09-11
+         * -author ChenXiao
+         * -date   2017-09-11
          * @param  {object} data 接口返回的数据
          * @return {undefined}
          */
@@ -86,9 +80,8 @@ tags: 编码规范
 
         /**
          * 根据的窗口的选项，创建弹出窗口对象
-         * @method createDialog
-         * @author ChenXiao
-         * @date   2017-09-11
+         * -author ChenXiao
+         * -date   2017-09-11
          * @param  {object} data 窗口选项，主要为要显示的信息类型
          * @return {object} 包含窗口标题、页面片段的信息的窗口对象
          */
@@ -108,9 +101,8 @@ tags: 编码规范
 
         /**
          * 模型转换主函数，将接口返回的数据转换为前端数据模型
-         * @method setAttributes
-         * @author ChenXiao
-         * @date   2017-09-11
+         * -author ChenXiao
+         * -date   2017-09-11
          * @param  {object} data 接口返回的数据
          * @return {undefined}
          */
@@ -126,9 +118,8 @@ tags: 编码规范
 
         /**
          * 将前端数据模型还原为接口数据模型
-         * @method getIntegrate
-         * @author ChenXiao
-         * @date   2017-09-11
+         * -author ChenXiao
+         * -date   2017-09-11
          * @return {Object} 接口数据模型
          */
          getIntegrate: function () {
@@ -161,6 +152,7 @@ tags: 编码规范
 # IDE中安装jsdoc辅助工具
 + sublime
 安装docBlockr
+安装fileHeader
 + webstorm
 请补充
 + vscode
