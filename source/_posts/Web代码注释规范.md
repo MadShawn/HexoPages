@@ -81,9 +81,6 @@ App.serverList = {
 ```javascript
 /**
  * 从url地址中获取拼接的参数值
- * @method  getUrlParam
- * @author  ChenXiao
- * @date    2017-09-13
  * @param   {String}    paramName 参数名称
  * @return  {String}    参数值
  */
@@ -123,12 +120,14 @@ export default class Controller extends Singleton {
     constructor(options) {
         super(options);
     }
+
     /**
      * 清空
      * @return {undefined}
      */
     clear() {
     }
+
     /**
      * 销毁单例
      * @return {undefined}
@@ -164,6 +163,7 @@ export default class Factory extends Singleton {
          */
         this._kvMap = {};
     }
+
     /**
      * 获取配置
      * @return {object} 键值对对象
@@ -179,6 +179,7 @@ export default class Factory extends Singleton {
  * @type {class}
  */
 static instance = null;
+
 /**
  * 获取单例对象的实例
  * @param  {...all} rest 参数
@@ -216,6 +217,7 @@ export default class Factory extends Singleton {
          */
         this._kvMap = {};
     }
+
     /**
      * 获取配置
      * @return {object} 键值对对象
@@ -231,6 +233,7 @@ export default class Factory extends Singleton {
  * @type {class}
  */
 static instance = null;
+
 /**
  * 获取单例对象的实例
  * @param  {...all} rest 参数
